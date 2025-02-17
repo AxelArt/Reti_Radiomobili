@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM Quiz</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .unit { margin-bottom: 20px; }
+        .unit button { padding: 10px 20px; font-size: 16px; margin-right: 10px; }
+        .question { margin-bottom: 20px; }
+        .options { margin-left: 20px; }
+        .submit-btn { margin-top: 20px; padding: 10px 20px; font-size: 16px; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>QCM Quiz</h1>
+    <p>Choose a unit to start the test:</p>
+    <div class="unit">
+        <button onclick="loadUnit(1)">Unit 1</button>
+        <button onclick="loadUnit(2)">Unit 2</button>
+        <button onclick="loadUnit(3)">Unit 3</button>
+        <button onclick="loadUnit(4)">Unit 4</button>
+        <button onclick="loadFinalUnit()">Final Unit (Random Questions)</button>
+    </div>
+
+    <div id="quiz-container" class="hidden">
+        <form id="quiz-form"></form>
+        <button type="button" class="submit-btn" onclick="checkAnswers()">Submit Answers</button>
+    </div>
+
+    <script>
+        // Define questions for each unit
+        const questions = {
+            unit1: [
+                {
+                    question: "1. What is the capital of France?",
+                    options: ["Paris", "London", "Berlin", "Madrid"],
+                    answer: "Paris"
+                },
+                {
+                    question: "2. What is 2 + 2?",
+                    options: ["3", "4", "5", "6"],
+                    answer: "4"
+                }
+            ],
+            unit2: [
+                {
+                    question: "1. Which planet is known as the Red Planet?",
+                    options: ["Earth", "Mars", "Jupiter", "Venus"],
+                    answer: "Mars"
+                },
+                {
+                    question: "2. What is the largest ocean on Earth?",
+                    options: ["Atlantic", "Indian", "Arctic", "Pacific"],
+                    answer: "Pacific"
+                }
+            ],
+            unit3: [
+                {
+                    question: "1. Who wrote 'Romeo and Juliet'?",
+                    options: ["Charles Dickens", "William Shakespeare", "Mark Twain", "Jane Austen"],
+                    answer: "William Shakespeare"
+                }
+            ],
+            unit4: [
+                {
+                    question: "1. What is the chemical symbol for water?",
+                    options: ["H2O", "CO2", "O2", "NaCl"],
+                    answer: "H2O"
+                }
+            ]
+        };
+
+        let currentQuestions = []; // Store the currently displayed questions
+
+        // Function to load a specific unit's questions
+        function loadUnit(unitNumber) {
+            const unitKey = `unit${unitNumber}`;
+            currentQuestions = questions[unitKey]; // Update current questions
+            displayQuestions(currentQuestions);
+        }
+
+        // Function to load random questions from all units for the final unit
+        function loadFinalUnit() {
+            const allQuestions = Object.values(questions).flat();
+            currentQuestions = getRandomQuestions(allQuestions, 5); // Update current questions
+            displayQuestions(currentQuestions);
+        }
+
+        // Function to display questions in the quiz form
+        function displayQuestions(questions) {
+            const quizForm = document.getElementById("quiz-form");
+            quizForm.innerHTML = ""; // Clear previous questions
+
+            questions.forEach((q, index) => {
+                const questionDiv = document.createElement("div");
+                questionDiv.className = "question";
+                questionDiv.innerHTML = `
+                    <p>${q.question}</p>
+                    <div class="options">
+                        ${q.options.map((option, i) => `
+                            <label><input type="radio" name="q${index}" value="${option}"> ${option}</label><br>
+                        `).join("")}
+                    </div>
+                `;
+                quizForm.appendChild(questionDiv);
+            });
+
+            document.getElementById("quiz-container").classList.remove("hidden");
+        }
+
+        // Function to get random questions
+        function getRandomQuestions(allQuestions, count) {
+            const shuffled = allQuestions.sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+
+        // Function to check answers
+        function checkAnswers() {
+            let score = 0;
+
+            currentQuestions.forEach((q, index) => {
+                const selected = document.querySelector(`input[name="q${index}"]:checked`);
+                if (selected && selected.value === q.answer) {
+                    score++;
+                }
+            });
+
+            alert(`You scored ${score} out of ${currentQuestions.length}`);
+        }
+    </script>
+</body>
+</html>
