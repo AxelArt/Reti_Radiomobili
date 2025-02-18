@@ -119,7 +119,58 @@
                     answer: "Con due frequenze diverse"
                 }
             ],
-            unit2: [], // Add questions for Unit 2 here
+            unit2: [
+                {
+                    question: "1. Qual è il principale obiettivo del criterio MAP (Maximum a Posteriori) nella teoria della decisione?",
+                    options: ["Massimizzare la potenza del segnale", "Massimizzare la probabilità a priori", "Minimizzare la probabilità di errore", "Minimizzare l’ampiezza di banda"],
+                    answer: "Minimizzare la probabilità di errore"
+                },
+                {
+                    question: "2. Nella formula della probabilità a posteriori, cosa rappresenta Pr(Si)?",
+                    options: ["La probabilità di errore", "La probabilità a priori di trasmettere il simbolo Si", "La probabilità di ricevere il simbolo corretto", "La potenza del segnale"],
+                    answer: "La probabilità a priori di trasmettere il simbolo Si"
+                },
+                {
+                    question: "3. Cosa rappresenta Pr(r(t) | Si) nella formula della teoria della decisione?",
+                    options: ["La probabilità di errore", "La probabilità di rumore del canale", "La probabilità condizionata di ricevere r(t) dato che è stato trasmesso Si", "L’efficienza spettrale del canale"],
+                    answer: "La probabilità condizionata di ricevere r(t) dato che è stato trasmesso Si"
+                },
+                {
+                    question: "4. Il criterio MAP è utile per minimizzare gli errori di decisione in presenza di:",
+                    options: ["Ampiezze diverse", "Interferenze e rumore", "Larghezza di banda elevata", "Segnali a fase variabile"],
+                    answer: "Interferenze e rumore"
+                },
+                {
+                    question: "5. Quale sistema di modulazione è più sensibile al rumore, richiedendo un criterio di decisione accurato come MAP?",
+                    options: ["ASK", "PSK", "FSK", "Tutti i precedenti"],
+                    answer: "PSK"
+                },
+                {
+                    question: "6. La formula della probabilità a posteriori si basa su quale principio statistico?",
+                    options: ["Teorema di Shannon", "Teorema di Bayes", "Trasformata di Fourier", "Criterio di Nyquist"],
+                    answer: "Teorema di Bayes"
+                },
+                {
+                    question: "7. In un sistema di rilevazione binaria ottimale, il simbolo scelto è quello con:",
+                    options: ["La probabilità più bassa di errore", "Il valore di ampiezza maggiore", "La probabilità a posteriori più alta", "La frequenza più alta"],
+                    answer: "La probabilità a posteriori più alta"
+                },
+                {
+                    question: "8. Il criterio MAP tiene conto della probabilità a priori perché:",
+                    options: ["Aumenta la potenza del segnale", "Riduce l’interferenza di rumore", "Aumenta la probabilità di decisione corretta", "Massimizza l’ampiezza di banda"],
+                    answer: "Aumenta la probabilità di decisione corretta"
+                },
+                {
+                    question: "9. Nella teoria della decisione, qual è l’effetto del rumore bianco gaussiano sul segnale ricevuto?",
+                    options: ["Aumenta la potenza del segnale", "Disturba il segnale, rendendo meno certa la decisione", "Riduce l’efficienza spettrale", "Aumenta la larghezza di banda"],
+                    answer: "Disturba il segnale, rendendo meno certa la decisione"
+                },
+                {
+                    question: "10. Quale delle seguenti modulazioni beneficia maggiormente del criterio MAP in canali rumorosi?",
+                    options: ["ASK", "OOK", "QAM", "Tutte le precedenti"],
+                    answer: "QAM"
+                }
+            ],
             unit3: [], // Add questions for Unit 3 here
             unit4: []  // Add questions for Unit 4 here
         };
