@@ -23,7 +23,7 @@
     <div class="unit">
         <button onclick="loadUnit(1)">Slide 3</button>
         <button onclick="loadUnit(2)">Slide 4</button>
-        <button onclick="loadUnit(3)">Unit 3</button>
+        <button onclick="loadUnit(3)">Slide 5</button>
         <button onclick="loadUnit(4)">Unit 4</button>
         <button onclick="loadFinalUnit()">Final Unit (Random Questions)</button>
     </div>
@@ -171,7 +171,58 @@
                     answer: "QAM"
                 }
             ],
-            unit3: [], // Add questions for Unit 3 here
+            unit3: [
+                {
+                    question: "1. Qual è uno dei principali vantaggi della modulazione PSK nei canali wireless?",
+                    options: ["Alto consumo di potenza", "Complessità di decodifica", "Inviluppo costante", "Efficienza spettrale bassa"],
+                    answer: "Inviluppo costante"
+                },
+                {
+                    question: "2. Quale problema è causato da transizioni di fase di ±π in QPSK?",
+                    options: ["Perdita di segnale", "Aumento della banda", "Non linearità negli amplificatori", "Incremento della potenza"],
+                    answer: "Non linearità negli amplificatori"
+                },
+                {
+                    question: "3. Quale caratteristica rende OQPSK più adatto rispetto a QPSK per amplificatori non lineari?",
+                    options: ["Maggiore efficienza spettrale", "Riduzione delle transizioni di fase di ±π", "Aumento della potenza del segnale", "Complessità ridotta del segnale"],
+                    answer: "Riduzione delle transizioni di fase di ±π"
+                },
+                {
+                    question: "4. In OQPSK, cosa succede alla componente Q rispetto alla componente I?",
+                    options: ["Viene amplificata", "È ritardata", "È sincronizzata", "Viene eliminata"],
+                    answer: "È ritardata"
+                },
+                {
+                    question: "5. Qual è lo scopo principale di π/4 QPSK?",
+                    options: ["Ridurre l’ampiezza di banda", "Aumentare la frequenza portante", "Mantenere inviluppo costante e transizioni ridotte", "Diminuire la potenza di trasmissione"],
+                    answer: "Mantenere inviluppo costante e transizioni ridotte"
+                },
+                {
+                    question: "6. Qual è il vantaggio principale della CPM nei sistemi wireless?",
+                    options: ["Consumo di potenza più elevato", "Inviluppo costante con fase continua", "Efficienza spettrale ridotta", "Transizioni di fase discontinue"],
+                    answer: "Inviluppo costante con fase continua"
+                },
+                {
+                    question: "7. In che modo la modulazione MSK garantisce l’ortogonalità?",
+                    options: ["Utilizzando una separazione di frequenza minima", "Aumentando la potenza del segnale", "Riducendo la larghezza di banda", "Utilizzando transizioni di fase non continue"],
+                    answer: "Utilizzando una separazione di frequenza minima"
+                },
+                {
+                    question: "8. Quale di queste modulazioni utilizza due costellazioni sfalsate di π/4?",
+                    options: ["QPSK", "OQPSK", "π/4 QPSK", "MSK"],
+                    answer: "π/4 QPSK"
+                },
+                {
+                    question: "9. Quale delle seguenti modulazioni è una variante di FSK con fase continua?",
+                    options: ["QPSK", "MSK", "π/4 QPSK", "OQPSK"],
+                    answer: "MSK"
+                },
+                {
+                    question: "10. Come si comportano i lobi laterali dello spettro di potenza di MSK rispetto a quelli di QPSK?",
+                    options: ["Sono più ampi", "Decrescono più lentamente", "Decrescono più rapidamente", "Sono identici"],
+                    answer: "Decrescono più rapidamente"
+                }
+            ],
             unit4: []  // Add questions for Unit 4 here
         };
 
