@@ -24,7 +24,7 @@
         <button onclick="loadUnit(1)">Slide 3</button>
         <button onclick="loadUnit(2)">Slide 4</button>
         <button onclick="loadUnit(3)">Slide 5</button>
-        <button onclick="loadUnit(4)">Unit 4</button>
+        <button onclick="loadUnit(4)">Slide 6</button>
         <button onclick="loadFinalUnit()">Final Unit (Random Questions)</button>
     </div>
 
@@ -223,8 +223,60 @@
                     answer: "Decrescono più rapidamente"
                 }
             ],
-            unit4: []  // Add questions for Unit 4 here
+            unit4: [
+                {
+                    question: "1. Qual è una delle applicazioni principali dell’OFDM?",
+                    options: ["Radio AM", "ADSL", "Bluetooth", "Wi-Fi"],
+                    answer: "ADSL"
+                },
+                {
+                    question: "2. Cosa indica il PAPR in un sistema OFDM?",
+                    options: ["La potenza media del segnale", "La differenza tra le portanti", "Il rapporto tra la potenza di picco e quella media", "Il livello di interferenza del canale"],
+                    answer: "Il rapporto tra la potenza di picco e quella media"
+                },
+                {
+                    question: "3. Qual è lo scopo del tempo di guardia (Tg) in OFDM?",
+                    options: ["Aumentare la velocità di trasmissione", "Ridurre il rumore di fase", "Evitare l’interferenza tra simboli", "Migliorare l’accuratezza del segnale ricevuto"],
+                    answer: "Evitare l’interferenza tra simboli"
+                },
+                {
+                    question: "4. Quale modulazione viene comunemente usata sulle portanti di un sistema OFDM?",
+                    options: ["AM", "FM", "QAM", "PCM"],
+                    answer: "QAM"
+                },
+                {
+                    question: "5. Come viene gestito l’aumento del PAPR nei sistemi OFDM?",
+                    options: ["Riducendo il tempo di guardia", "Usando clipping e filtraggio", "Incrementando la frequenza", "Aumentando il numero di portanti"],
+                    answer: "Usando clipping e filtraggio"
+                },
+                {
+                    question: "6. Quale parametro è stimato usando segnali pilota in un sistema OFDM?",
+                    options: ["La larghezza di banda", "La potenza di picco", "L’offset di frequenza", "La velocità di trasmissione"],
+                    answer: "L’offset di frequenza"
+                },
+                {
+                    question: "7. Cosa si utilizza per evitare l’interferenza intercanale (ICI) in OFDM?",
+                    options: ["Amplificatori non lineari", "Segnali pilota e tecniche di compensazione", "Riduzione della larghezza di banda", "Modulatori in fase e quadratura"],
+                    answer: "Segnali pilota e tecniche di compensazione"
+                },
+                {
+                    question: "8. Qual è uno dei vantaggi principali dell’OFDM nei canali radio?",
+                    options: ["Bassa efficienza spettrale", "Trasmissione analogica stabile", "Miglioramento delle prestazioni in termini di bit-rate", "Uso ridotto di modulazioni digitali"],
+                    answer: "Miglioramento delle prestazioni in termini di bit-rate"
+                },
+                {
+                    question: "9. Qual è la funzione dell’equalizzatore in un sistema OFDM?",
+                    options: ["Amplificare il segnale", "Compensare le attenuazioni di frequenza del canale", "Ridurre il rumore di fase", "Stabilizzare la modulazione QAM"],
+                    answer: "Compensare le attenuazioni di frequenza del canale"
+                },
+                {
+                    question: "10. Che tipo di interferenza si verifica a causa della desincronizzazione temporale in OFDM?",
+                    options: ["Interferenza di rumore", "Interferenza tra canali", "Interferenza tra simboli (ISI)", "Interferenza armonica"],
+                    answer: "Interferenza tra simboli (ISI)"
+                }
+            ]
         };
+
 
         let currentQuestions = []; // Store the currently displayed questions
 
