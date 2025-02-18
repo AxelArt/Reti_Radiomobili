@@ -558,7 +558,7 @@ unit6: [
         // Function to load random questions from all units for the final unit
         function loadFinalUnit() {
             const allQuestions = Object.values(questions).flat();
-            currentQuestions = getRandomQuestions(allQuestions, 5); // Update current questions
+            currentQuestions = getRandomQuestions(allQuestions, 15); // Update current questions
             displayQuestions(currentQuestions);
         }
 
