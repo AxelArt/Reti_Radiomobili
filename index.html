@@ -26,6 +26,7 @@
         <button onclick="loadUnit(3)">Slide 5</button>
         <button onclick="loadUnit(4)">Slide 6</button>
         <button onclick="loadUnit(5)">Slide 7</button>
+        <button onclick="loadUnit(6)">Slide 8</button>
         <button onclick="loadFinalUnit()">Final Unit (Random Questions)</button>
     </div>
 
@@ -387,6 +388,159 @@
                     question: "22. In quale caso la tecnica di diversità spaziale è efficace?",
                     options: ["Quando le antenne sono molto vicine", "Quando le antenne sono distanziate di almeno mezza lunghezza d'onda", "Quando si utilizzano solo segnali a bassa frequenza", "Quando il fading è minimo"],
                     answer: "Quando le antenne sono distanziate di almeno mezza lunghezza d'onda"
+                }
+            ],
+
+unit6: [
+                {
+                    question: "1. Quale vantaggio principale introduce il GPRS rispetto al GSM tradizionale?",
+                    options: ["Maggiore ampiezza di banda", "Trasmissione a pacchetto e tariffe basate sui dati", "Compatibilità con le reti Wi-Fi", "Nuovi protocolli per la voce"],
+                    answer: "Trasmissione a pacchetto e tariffe basate sui dati"
+                },
+                {
+                    question: "2. Qual è la funzione del GGSN nell’architettura GPRS?",
+                    options: ["Trasmettere pacchetti dati tra terminali mobili", "Autenticare gli utenti GPRS", "Collegare la rete GSM a reti a pacchetto esterne", "Sincronizzare i canali radio"],
+                    answer: "Collegare la rete GSM a reti a pacchetto esterne"
+                },
+                {
+                    question: "3. Qual è la modulazione utilizzata da EDGE per triplicare il bit rate rispetto al GPRS?",
+                    options: ["GMSK", "3π/8 shifted PSK", "QPSK", "FSK"],
+                    answer: "3π/8 shifted PSK"
+                },
+                {
+                    question: "4. Cosa consente di fare la funzione 'Incremental Redundancy'?",
+                    options: ["Scartare pacchetti corrotti", "Trasmettere bit di ridondanza aggiuntivi per correggere errori", "Identificare il tipo di modulazione utilizzata", "Aumentare la larghezza di banda"],
+                    answer: "Trasmettere bit di ridondanza aggiuntivi per correggere errori"
+                },
+                {
+                    question: "5. Qual è la velocità massima teorica raggiungibile con EGPRS (8 TS)?",
+                    options: ["160 kbps", "256 kbps", "473,6 kbps", "512 kbps"],
+                    answer: "473,6 kbps"
+                },
+                {
+                    question: "6. Cosa indica il termine 'Blind Detection'?",
+                    options: ["La rilevazione automatica del tipo di modulazione usata", "La trasmissione senza header", "La decodifica di segnali non sincronizzati", "La rilevazione del throughput massimo"],
+                    answer: "La rilevazione automatica del tipo di modulazione usata"
+                },
+                {
+                    question: "7. Quale modulazione è più adatta per canali rumorosi nel GPRS?",
+                    options: ["GMSK", "8-PSK", "QAM", "PSK"],
+                    answer: "GMSK"
+                },
+                {
+                    question: "8. Qual è la differenza principale tra GPRS e EGPRS?",
+                    options: ["EGPRS usa modulazioni più avanzate per aumentare l’efficienza spettrale", "EGPRS richiede infrastrutture completamente nuove", "GPRS supporta velocità di trasmissione più elevate", "EGPRS è usato solo per traffico voce"],
+                    answer: "EGPRS usa modulazioni più avanzate per aumentare l’efficienza spettrale"
+                },
+                {
+                    question: "9. Quale tecnica aiuta a migliorare la trasmissione dati su canali degradati?",
+                    options: ["Blind Detection", "Incremental Redundancy", "Link Adaptation", "ARQ"],
+                    answer: "Incremental Redundancy"
+                },
+                {
+                    question: "10. Quale tecnologia è necessaria per supportare la modulazione 8-PSK nell’EGPRS?",
+                    options: ["Nuove antenne con polarizzazione ortogonale", "Aggiornamento della rete core", "Nuove unità transceiver compatibili", "Un cambio di frequenza radio"],
+                    answer: "Nuove unità transceiver compatibili"
+                },
+                {
+                    question: "11. Qual è il nodo che gestisce l'autenticazione e il trasferimento di pacchetti dati nel GPRS?",
+                    options: ["BTS", "SGSN", "GGSN", "BSC"],
+                    answer: "SGSN"
+                },
+                {
+                    question: "12. Quale innovazione dell'EGPRS consente di migliorare l'efficienza spettrale?",
+                    options: ["Moduli hardware avanzati", "Modulazione 8-PSK", "Aggiornamento della rete core", "Incremento del numero di antenne"],
+                    answer: "Modulazione 8-PSK"
+                },
+                {
+                    question: "13. Cosa rappresenta il valore massimo di throughput teorico per un time slot in GPRS?",
+                    options: ["10 kbps", "20 kbps", "40 kbps", "60 kbps"],
+                    answer: "20 kbps"
+                },
+                {
+                    question: "14. Cosa consente di evitare l'uso della modulazione 3π/8 shifted PSK?",
+                    options: ["La riduzione del rumore", "Traiettorie di fase passanti per l’origine", "La necessità di sincronizzazione tra BTS", "La perdita di pacchetti"],
+                    answer: "Traiettorie di fase passanti per l’origine"
+                },
+                {
+                    question: "15. In che modo l’EGPRS determina il tipo di codifica da utilizzare per la trasmissione?",
+                    options: ["Basandosi sulla capacità del terminale", "Attraverso la funzione di Link Adaptation", "Usando algoritmi di criptografia avanzati", "Tramite analisi delle applicazioni"],
+                    answer: "Attraverso la funzione di Link Adaptation"
+                },
+                {
+                    question: "16. Quale tecnologia combina codifica convoluzionale e bit di ridondanza per migliorare la trasmissione dati?",
+                    options: ["GPRS ARQ", "Incremental Redundancy", "Blind Detection", "Channel Encoding"],
+                    answer: "Incremental Redundancy"
+                },
+                {
+                    question: "17. Per quale motivo è necessaria la funzione Blind Detection nell'EGPRS?",
+                    options: ["Rilevare automaticamente il tipo di modulazione", "Calcolare la velocità massima di trasmissione", "Gestire la sincronizzazione tra terminali", "Evitare interferenze tra bande"],
+                    answer: "Rilevare automaticamente il tipo di modulazione"
+                },
+                {
+                    question: "18. Quale componente viene aggiunto nella rete GSM per supportare l’EGPRS?",
+                    options: ["Nuovo MSC", "Nuova unità transceiver", "Moduli LTE avanzati", "Protocollo TCP/IP"],
+                    answer: "Nuova unità transceiver"
+                },
+                {
+                    question: "19. Quanti bit informativi può contenere un simbolo trasmesso con modulazione 8-PSK?",
+                    options: ["1", "2", "3", "4"],
+                    answer: "3"
+                },
+                {
+                    question: "20. Quale classe di terminali EDGE supporta la modulazione 8-PSK solo in downlink?",
+                    options: ["Classe A", "Classe B", "Classe C", "Prima classe"],
+                    answer: "Prima classe"
+                },
+                {
+                    question: "21. Qual è il throughput massimo teorico raggiungibile per time slot in EGPRS con modulazione 8-PSK?",
+                    options: ["40 kbps", "59,2 kbps", "80 kbps", "100 kbps"],
+                    answer: "59,2 kbps"
+                },
+                {
+                    question: "22. In che modo l'EGPRS migliora rispetto al GPRS nei canali rumorosi?",
+                    options: ["Usando solo modulazione GMSK", "Adattando modulazione e codifica alle condizioni del canale", "Incrementando il numero di pacchetti trasmessi", "Riducendo la larghezza di banda"],
+                    answer: "Adattando modulazione e codifica alle condizioni del canale"
+                },
+                {
+                    question: "23. Qual è il principale vantaggio della funzione di Incremental Redundancy?",
+                    options: ["Scartare pacchetti corrotti", "Ridurre il consumo energetico", "Aumentare la probabilità di successo delle ri-trasmissioni", "Aumentare il bit rate massimo"],
+                    answer: "Aumentare la probabilità di successo delle ri-trasmissioni"
+                },
+                {
+                    question: "24. Quale schema di codifica viene utilizzato nei primi quattro MCS dell’EGPRS?",
+                    options: ["8-PSK", "GMSK", "QPSK", "OQPSK"],
+                    answer: "GMSK"
+                },
+                {
+                    question: "25. Cosa differenzia il GPRS dal GSM classico in termini di trasmissione dati?",
+                    options: ["Supporto per dati a pacchetto", "Utilizzo di nuove antenne", "Riduzione del ritardo nella trasmissione", "Nuovi protocolli per la voce"],
+                    answer: "Supporto per dati a pacchetto"
+                },
+                {
+                    question: "26. Quale funzione utilizza il BER per adattare la trasmissione in EGPRS?",
+                    options: ["Link Adaptation", "Blind Detection", "Incremental Redundancy", "Channel Estimation"],
+                    answer: "Link Adaptation"
+                },
+                {
+                    question: "27. Qual è lo scopo principale della modulazione 3π/8 shifted PSK?",
+                    options: ["Aumentare il numero di time slot", "Evitare traiettorie di fase passanti per l’origine", "Ridurre il consumo energetico", "Aumentare la larghezza di banda"],
+                    answer: "Evitare traiettorie di fase passanti per l’origine"
+                },
+                {
+                    question: "28. Cosa rappresenta la funzione ARQ nei sistemi GPRS e EGPRS?",
+                    options: ["Una tecnica di criptografia", "Un metodo di controllo degli errori con ritrasmissione", "Un protocollo per la gestione della rete", "Un meccanismo per la sincronizzazione"],
+                    answer: "Un metodo di controllo degli errori con ritrasmissione"
+                },
+                {
+                    question: "29. Quale limite è introdotto nell’EGPRS per l’utilizzo della modulazione 8-PSK?",
+                    options: ["È utilizzata solo per il traffico voce", "Richiede terminali compatibili", "Aumenta la larghezza di banda necessaria", "Non è adatta per trasmissioni veloci"],
+                    answer: "Richiede terminali compatibili"
+                },
+                {
+                    question: "30. Quale componente gestisce la sincronizzazione nella rete EGPRS?",
+                    options: ["GGSN", "BTS", "PCU", "SGSN"],
+                    answer: "GGSN"
                 }
             ]
         };
