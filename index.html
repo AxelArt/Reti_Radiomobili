@@ -27,6 +27,7 @@
         <button onclick="loadUnit(4)">Slide 6</button>
         <button onclick="loadUnit(5)">Slide 7</button>
         <button onclick="loadUnit(6)">Slide 8</button>
+        <button onclick="loadUnit(7)">Slide 9</button>
         <button onclick="loadFinalUnit()">Final Unit (Random Questions)</button>
     </div>
 
@@ -542,7 +543,60 @@ unit6: [
                     options: ["GGSN", "BTS", "PCU", "SGSN"],
                     answer: "GGSN"
                 }
+            ],
+        unit7: [
+                {
+                    question: "1. Qual è il principale vantaggio dello Spread Spectrum nel CDMA?",
+                    options: ["Aumentare la potenza del segnale", "Permettere a più utenti di condividere la stessa banda senza interferenze", "Ridurre la larghezza di banda necessaria", "Migliorare il throughput massimo"],
+                    answer: "Permettere a più utenti di condividere la stessa banda senza interferenze"
+                },
+                {
+                    question: "2. Cosa caratterizza i codici pseudo-random (PN) usati nel CDMA?",
+                    options: ["Sono completamente casuali", "Sono deterministici e simili al rumore", "Sono utilizzati solo per trasmissioni vocali", "Non sono sincronizzati"],
+                    answer: "Sono deterministici e simili al rumore"
+                },
+                {
+                    question: "3. Quale tecnica di Spread Spectrum utilizza salti frequenti stabiliti da un codice pseudo-random?",
+                    options: ["Time Hopping", "Frequency Hopping", "Direct Sequence", "Code Hopping"],
+                    answer: "Frequency Hopping"
+                },
+                {
+                    question: "4. Qual è la funzione principale di un ricevitore rake?",
+                    options: ["Sincronizzare la portante del segnale", "Migliorare l'SNR utilizzando segnali multipath", "Ridurre l'interferenza tra utenti", "Generare nuovi codici PN"],
+                    answer: "Migliorare l'SNR utilizzando segnali multipath"
+                },
+                {
+                    question: "5. Quale standard utilizza il WCDMA come tecnologia di accesso?",
+                    options: ["GSM", "IS-95", "UMTS", "Wi-Fi"],
+                    answer: "UMTS"
+                },
+                {
+                    question: "6. Come si comportano i codici di Walsh nel CDMA?",
+                    options: ["Aumentano la larghezza di banda del segnale", "Discriminano gli utenti nel Forward Link", "Sono usati per minimizzare il fading multipath", "Sono generati casualmente"],
+                    answer: "Discriminano gli utenti nel Forward Link"
+                },
+                {
+                    question: "7. Qual è il vantaggio principale del controllo dinamico della potenza nel CDMA?",
+                    options: ["Ridurre il consumo energetico", "Aumentare il throughput", "Migliorare la qualità del segnale ricevuto", "Sincronizzare gli utenti"],
+                    answer: "Migliorare la qualità del segnale ricevuto"
+                },
+                {
+                    question: "8. Qual è l'obiettivo del soft handover nel CDMA?",
+                    options: ["Cambiare frequenza durante la comunicazione", "Associare un nuovo codice alla nuova BTS", "Ridurre le interferenze di rete", "Aumentare la potenza di trasmissione"],
+                    answer: "Associare un nuovo codice alla nuova BTS"
+                },
+                {
+                    question: "9. Qual è il rapporto chiave nello Spread Spectrum per aumentare l'SNR?",
+                    options: ["Banda trasmessa/data rate (W/R)", "Data rate/banda trasmessa (R/W)", "Potenza trasmessa/potenza ricevuta", "Tempo di propagazione/distanza"],
+                    answer: "Banda trasmessa/data rate (W/R)"
+                },
+                {
+                    question: "10. Quale tecnologia è considerata un esempio di CDMA?",
+                    options: ["LTE", "GPS", "GSM", "TDMA"],
+                    answer: "GPS"
+                }
             ]
+    
         };
 
 
