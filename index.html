@@ -12,6 +12,9 @@
         .options { margin-left: 20px; }
         .submit-btn { margin-top: 20px; padding: 10px 20px; font-size: 16px; }
         .hidden { display: none; }
+        .correct { color: green; }
+        .incorrect { color: red; }
+        .score { font-size: 20px; font-weight: bold; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -28,6 +31,7 @@
     <div id="quiz-container" class="hidden">
         <form id="quiz-form"></form>
         <button type="button" class="submit-btn" onclick="checkAnswers()">Submit Answers</button>
+        <div id="score-display" class="score hidden"></div>
     </div>
 
     <script>
@@ -35,42 +39,89 @@
         const questions = {
             unit1: [
                 {
-                    question: "1. What is the capital of France?",
-                    options: ["Paris", "London", "Berlin", "Madrid"],
-                    answer: "Paris"
+                    question: "1. Nella modulazione ASK, il parametro variabile per trasmettere le informazioni è:",
+                    options: ["Fase", "Frequenza", "Ampiezza", "Periodo"],
+                    answer: "Ampiezza"
                 },
                 {
-                    question: "2. What is 2 + 2?",
-                    options: ["3", "4", "5", "6"],
+                    question: "2. La modulazione FSK è caratterizzata da:",
+                    options: ["Variazioni di ampiezza", "Variazioni di fase", "Variazioni di frequenza", "Variazioni di potenza"],
+                    answer: "Variazioni di frequenza"
+                },
+                {
+                    question: "3. In una modulazione PSK a 4 livelli (QPSK), quanti bit sono rappresentati da ciascun simbolo?",
+                    options: ["1", "2", "4", "8"],
+                    answer: "2"
+                },
+                {
+                    question: "4. Quale modulazione richiede una larghezza di banda maggiore?",
+                    options: ["ASK", "FSK", "BPSK", "Tutte richiedono la stessa larghezza di banda"],
+                    answer: "FSK"
+                },
+                {
+                    question: "5. La modulazione QAM combina variazioni di:",
+                    options: ["Fase e ampiezza", "Ampiezza e frequenza", "Fase e frequenza", "Potenza e ampiezza"],
+                    answer: "Fase e ampiezza"
+                },
+                {
+                    question: "6. Quale delle seguenti modulazioni è più sensibile al rumore?",
+                    options: ["ASK", "FSK", "PSK", "QAM"],
+                    answer: "ASK"
+                },
+                {
+                    question: "7. Quale modulazione permette di trasmettere più dati per simbolo aumentando il numero di livelli?",
+                    options: ["ASK", "FSK", "PSK", "M-ary QAM"],
+                    answer: "M-ary QAM"
+                },
+                {
+                    question: "8. La modulazione PSK a più livelli (M-ary PSK) rappresenta ogni simbolo con:",
+                    options: ["Una diversa fase", "Una diversa frequenza", "Una diversa fase", "Una combinazione di ampiezza e fase"],
+                    answer: "Una diversa fase"
+                },
+                {
+                    question: "9. Quale tra queste modulazioni presenta una maggiore efficienza spettrale in presenza di rumore?",
+                    options: ["FSK ortogonale", "ASK binaria", "PSK", "OOK"],
+                    answer: "PSK"
+                },
+                {
+                    question: "10. In una modulazione FSK, l'informazione è contenuta principalmente:",
+                    options: ["Nella fase della portante", "Nell'ampiezza della portante", "Nella frequenza della portante", "Nel periodo del segnale"],
+                    answer: "Nella frequenza della portante"
+                },
+                {
+                    question: "11. In QPSK, quanti simboli diversi sono rappresentati sulla costellazione?",
+                    options: ["2", "4", "8", "16"],
                     answer: "4"
-                }
-            ],
-            unit2: [
-                {
-                    question: "1. Which planet is known as the Red Planet?",
-                    options: ["Earth", "Mars", "Jupiter", "Venus"],
-                    answer: "Mars"
                 },
                 {
-                    question: "2. What is the largest ocean on Earth?",
-                    options: ["Atlantic", "Indian", "Arctic", "Pacific"],
-                    answer: "Pacific"
+                    question: "12. Quale delle seguenti modulazioni richiede un'ampiezza costante e si basa solo su variazioni di frequenza?",
+                    options: ["ASK", "FSK", "QAM", "BPSK"],
+                    answer: "FSK"
+                },
+                {
+                    question: "13. In una modulazione PSK, l'informazione digitale è codificata attraverso variazioni di:",
+                    options: ["Ampiezza", "Frequenza", "Fase", "Potenza"],
+                    answer: "Fase"
+                },
+                {
+                    question: "14. Quale delle seguenti modulazioni digitali varia sia la fase che l'ampiezza per codificare i dati?",
+                    options: ["PSK", "ASK", "FSK", "QAM"],
+                    answer: "QAM"
+                },
+                {
+                    question: "15. La modulazione QPSK utilizza quanti angoli di fase per rappresentare i simboli?",
+                    options: ["2", "4", "8", "16"],
+                    answer: "4"
+                },
+                {
+                    question: "16. In una modulazione FSK binaria, come vengono rappresentati i bit '1' e '0'?",
+                    options: ["Con due frequenze diverse", "Con due fasi diverse", "Con due ampiezze diverse", "Con variazioni di potenza"],
+                    answer: "Con due frequenze diverse"
                 }
             ],
-            unit3: [
-                {
-                    question: "1. Who wrote 'Romeo and Juliet'?",
-                    options: ["Charles Dickens", "William Shakespeare", "Mark Twain", "Jane Austen"],
-                    answer: "William Shakespeare"
-                }
-            ],
-            unit4: [
-                {
-                    question: "1. What is the chemical symbol for water?",
-                    options: ["H2O", "CO2", "O2", "NaCl"],
-                    answer: "H2O"
-                }
-            ]
+            unit2: [], // Add questions for Unit 2 here
+            unit3: [], // Add questions for Unit 3 here
+            unit4: []  // Add questions for Unit 4 here
         };
 
         let currentQuestions = []; // Store the currently displayed questions
@@ -109,6 +160,7 @@
             });
 
             document.getElementById("quiz-container").classList.remove("hidden");
+            document.getElementById("score-display").classList.add("hidden"); // Hide score display initially
         }
 
         // Function to get random questions
@@ -123,12 +175,26 @@
 
             currentQuestions.forEach((q, index) => {
                 const selected = document.querySelector(`input[name="q${index}"]:checked`);
+                const options = document.querySelectorAll(`input[name="q${index}"]`);
+
+                options.forEach(option => {
+                    const label = option.parentElement;
+                    if (option.value === q.answer) {
+                        label.classList.add("correct"); // Highlight correct answer in green
+                    } else if (option.checked && option.value !== q.answer) {
+                        label.classList.add("incorrect"); // Highlight wrong answer in red
+                    }
+                });
+
                 if (selected && selected.value === q.answer) {
                     score++;
                 }
             });
 
-            alert(`You scored ${score} out of ${currentQuestions.length}`);
+            // Display the score
+            const scoreDisplay = document.getElementById("score-display");
+            scoreDisplay.textContent = `You scored ${score} out of ${currentQuestions.length}`;
+            scoreDisplay.classList.remove("hidden");
         }
     </script>
 </body>
