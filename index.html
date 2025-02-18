@@ -25,6 +25,7 @@
         <button onclick="loadUnit(2)">Slide 4</button>
         <button onclick="loadUnit(3)">Slide 5</button>
         <button onclick="loadUnit(4)">Slide 6</button>
+        <button onclick="loadUnit(5)">Slide 7</button>
         <button onclick="loadFinalUnit()">Final Unit (Random Questions)</button>
     </div>
 
@@ -273,6 +274,119 @@
                     question: "10. Che tipo di interferenza si verifica a causa della desincronizzazione temporale in OFDM?",
                     options: ["Interferenza di rumore", "Interferenza tra canali", "Interferenza tra simboli (ISI)", "Interferenza armonica"],
                     answer: "Interferenza tra simboli (ISI)"
+                }
+            ],
+            
+        unit5: [
+                {
+                    question: "1. Qual è la causa principale del fenomeno di fading nei canali radio?",
+                    options: ["Assenza di modulazione", "Propagazione su percorsi multipli e movimento relativo", "Uso di frequenze molto alte", "Interferenze armoniche"],
+                    answer: "Propagazione su percorsi multipli e movimento relativo"
+                },
+                {
+                    question: "2. Cosa rappresenta la banda di coerenza in un canale con fading?",
+                    options: ["La larghezza di banda massima del segnale", "La frequenza massima utilizzata", "L'intervallo di frequenza oltre il quale le componenti subiscono fading indipendenti", "La potenza massima del segnale trasmesso"],
+                    answer: "L'intervallo di frequenza oltre il quale le componenti subiscono fading indipendenti"
+                },
+                {
+                    question: "3. Il Doppler spread in un canale con fading è causato da:",
+                    options: ["La larghezza di banda del segnale", "La velocità del ricevitore o trasmettitore", "Il ritardo di propagazione del segnale", "La modulazione del segnale"],
+                    answer: "La velocità del ricevitore o trasmettitore"
+                },
+                {
+                    question: "4. Quando si verifica un fading piatto (flat fading)?",
+                    options: ["Quando la banda di coerenza è maggiore della banda del segnale", "Quando la banda del segnale è superiore alla banda di coerenza", "Quando il Doppler spread è molto elevato", "Quando si trasmette a frequenze basse"],
+                    answer: "Quando la banda di coerenza è maggiore della banda del segnale"
+                },
+                {
+                    question: "5. Qual è l’obiettivo della diversità spaziale?",
+                    options: ["Aumentare la larghezza di banda", "Ridurre l’uso di antenne", "Ricevere segnali attraverso antenne distanziate per ridurre il fading", "Eliminare le interferenze armoniche"],
+                    answer: "Ricevere segnali attraverso antenne distanziate per ridurre il fading"
+                },
+                {
+                    question: "6. Quale tecnica di combinazione dei segnali consente di massimizzare l’SNR ponderando i segnali ricevuti in base all’attenuazione?",
+                    options: ["Selection Combining", "Maximal Ratio Combining", "Equal Gain Combining", "Frequency Diversity"],
+                    answer: "Maximal Ratio Combining"
+                },
+                {
+                    question: "7. Qual è lo scopo della CSI (Channel State Information)?",
+                    options: ["Ridurre la potenza del segnale trasmesso", "Monitorare le condizioni del canale per migliorare la rilevazione del segnale", "Aumentare la frequenza del segnale", "Modificare il tipo di modulazione"],
+                    answer: "Monitorare le condizioni del canale per migliorare la rilevazione del segnale"
+                },
+                {
+                    question: "8. In quale caso si verifica il Rayleigh fading?",
+                    options: ["Quando il segnale attraversa solo un percorso fisso", "Quando non ci sono percorsi dominanti e tutti i percorsi contribuiscono in modo casuale", "Quando il segnale è modulato in ampiezza", "Quando la banda di coerenza è infinita"],
+                    answer: "Quando non ci sono percorsi dominanti e tutti i percorsi contribuiscono in modo casuale"
+                },
+                {
+                    question: "9. La diversità di polarizzazione consiste in:",
+                    options: ["Usare antenne spazialmente distanti", "Trasmettere su polarizzazioni ortogonali per ridurre la correlazione del fading", "Usare frequenze molto distanti tra loro", "Trasmettere lo stesso segnale su diverse bande di frequenza"],
+                    answer: "Trasmettere su polarizzazioni ortogonali per ridurre la correlazione del fading"
+                },
+                {
+                    question: "10. Qual è una limitazione della diversità temporale nei canali mobili?",
+                    options: ["Aumenta il consumo di potenza", "Richiede grande separazione fisica delle antenne", "Può introdurre elevati ritardi", "Riduce la larghezza di banda"],
+                    answer: "Può introdurre elevati ritardi"
+                },
+                {
+                    question: "11. In quale contesto si utilizza Equal Gain Combining (EGC)?",
+                    options: ["Quando è necessario minimizzare il PAPR", "Quando non è disponibile una CSI precisa", "Per ridurre la larghezza di banda", "Quando si utilizzano antenne a elevata distanza"],
+                    answer: "Quando non è disponibile una CSI precisa"
+                },
+                {
+                    question: "12. La diversità temporale si ottiene:",
+                    options: ["Trasmettendo il segnale su diverse frequenze", "Trasmettendo il segnale in slot temporali distanti", "Usando antenne polarizzate", "Utilizzando modulazioni ortogonali"],
+                    answer: "Trasmettendo il segnale in slot temporali distanti"
+                },
+                {
+                    question: "13. Quale tecnica di diversità può aumentare l’uso di larghezza di banda?",
+                    options: ["Diversità spaziale", "Diversità temporale", "Diversità di polarizzazione", "Diversità in frequenza"],
+                    answer: "Diversità in frequenza"
+                },
+                {
+                    question: "14. Quale di queste non è una tecnica di combinazione della diversità?",
+                    options: ["Selection Combining", "Maximal Ratio Combining", "Frequency Modulation", "Equal Gain Combining"],
+                    answer: "Frequency Modulation"
+                },
+                {
+                    question: "15. Qual è il vantaggio principale della diversità di polarizzazione?",
+                    options: ["Minore uso di larghezza di banda", "Non richiede separazione fisica delle antenne", "Aumenta la potenza del segnale", "Consente trasmissioni in fase"],
+                    answer: "Non richiede separazione fisica delle antenne"
+                },
+                {
+                    question: "16. Quando è consigliata la tecnica Maximal Ratio Combining (MRC)?",
+                    options: ["Quando si vuole ridurre l’energia del segnale", "Per massimizzare l’SNR ponderando i segnali in base alla qualità", "Quando si usano antenne con la stessa polarizzazione", "Per ridurre la larghezza di banda"],
+                    answer: "Per massimizzare l’SNR ponderando i segnali in base alla qualità"
+                },
+                {
+                    question: "17. Cosa comporta l’uso della diversità di frequenza?",
+                    options: ["Uso di antenne a elevata distanza", "Invio del segnale su frequenze più ampie della banda di coerenza", "Invio del segnale su una singola frequenza", "Uso di antenne polarizzate"],
+                    answer: "Invio del segnale su frequenze più ampie della banda di coerenza"
+                },
+                {
+                    question: "18. Quale tra questi metodi non richiede conoscenza dello stato del canale (CSI)?",
+                    options: ["Maximal Ratio Combining", "Selection Combining", "Equal Gain Combining", "Tutti i precedenti"],
+                    answer: "Equal Gain Combining"
+                },
+                {
+                    question: "19. Qual è lo svantaggio principale della diversità temporale nei sistemi mobili?",
+                    options: ["Aumento della potenza di trasmissione", "Introduzione di elevati ritardi", "Riduzione dell’SNR", "Aumento della larghezza di banda"],
+                    answer: "Introduzione di elevati ritardi"
+                },
+                {
+                    question: "20. Che cosa consente di ridurre la diversità di canale nelle trasmissioni?",
+                    options: ["La distanza tra le antenne", "La correlazione del segnale", "Gli effetti del fading", "L’ampiezza della banda trasmessa"],
+                    answer: "Gli effetti del fading"
+                },
+                {
+                    question: "21. Quando un canale è affetto da Rayleigh fading, qual è il modello statistico del segnale?",
+                    options: ["Binario", "Gaussiano", "Ortogonale", "Rayleigh"],
+                    answer: "Rayleigh"
+                },
+                {
+                    question: "22. In quale caso la tecnica di diversità spaziale è efficace?",
+                    options: ["Quando le antenne sono molto vicine", "Quando le antenne sono distanziate di almeno mezza lunghezza d'onda", "Quando si utilizzano solo segnali a bassa frequenza", "Quando il fading è minimo"],
+                    answer: "Quando le antenne sono distanziate di almeno mezza lunghezza d'onda"
                 }
             ]
         };
