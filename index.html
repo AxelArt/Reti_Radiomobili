@@ -7,7 +7,19 @@
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         .unit { margin-bottom: 20px; }
-        .unit button { padding: 10px 20px; font-size: 16px; margin-right: 10px; }
+        .unit button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-right: 10px;
+            background-color: #f0f0f0; /* Default button color */
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .unit button.active {
+            background-color: #4CAF50; /* Active button color */
+            color: white;
+            border: 1px solid #4CAF50;
+        }
         .question { margin-bottom: 20px; }
         .options { margin-left: 20px; }
         .submit-btn { margin-top: 20px; padding: 10px 20px; font-size: 16px; }
@@ -28,6 +40,10 @@
         <button onclick="loadUnit(5)">fading channels</button>
         <button onclick="loadUnit(6)">Intro. reti Radiomobili</button>
         <button onclick="loadUnit(7)">AMPS-TACS</button>
+        <button onclick="loadUnit(8)">UMTS</button>
+        <button onclick="loadUnit(9)">HSPA</button>
+        <button onclick="loadUnit(10)">LTE</button>
+        <button onclick="loadUnit(11)">5G</button>
         <button onclick="loadFinalUnit()">Final Unit (Random Questions)</button>
     </div>
 
@@ -36,6 +52,8 @@
         <button type="button" class="submit-btn" onclick="checkAnswers()">Submit Answers</button>
         <div id="score-display" class="score hidden"></div>
     </div>
+
+
 
     <script>
         // Define questions for each unit
@@ -595,18 +613,309 @@ unit6: [
                     options: ["LTE", "GPS", "GSM", "TDMA"],
                     answer: "GPS"
                 }
-            ]
+            ],
+
     
+        unit8: [
+                {
+                    question: "1. Qual è la velocità massima di trasmissione dati prevista per MS fermi in UMTS?",
+                    options: ["144 kbit/s", "384 kbit/s", "2 Mbit/s", "500 kbit/s"],
+                    answer: "2 Mbit/s"
+                },
+                {
+                    question: "2. Quale tecnica di accesso al canale è utilizzata dall'UMTS?",
+                    options: ["FDMA", "W-CDMA", "TDMA", "OFDMA"],
+                    answer: "W-CDMA"
+                },
+                {
+                    question: "3. Qual è la funzione principale del controllo di potenza in UMTS?",
+                    options: ["Aumentare la larghezza di banda", "Minimizzare le interferenze tra utenti", "Migliorare la velocità di trasmissione", "Ridurre il consumo energetico"],
+                    answer: "Minimizzare le interferenze tra utenti"
+                },
+                {
+                    question: "4. Quale classe di QoS è utilizzata per servizi come e-mail e SMS?",
+                    options: ["Streaming", "Background", "Conversazionale", "Interattiva"],
+                    answer: "Background"
+                },
+                {
+                    question: "5. In quale modalità di duplex l’UMTS utilizza bande di frequenza separate per trasmissione e ricezione?",
+                    options: ["TDD", "FDD", "WCDMA", "FDMA"],
+                    answer: "FDD"
+                },
+                {
+                    question: "6. Quale componente dell'UTRAN è responsabile della gestione delle celle?",
+                    options: ["UE", "Node B", "RNC", "Core Network"],
+                    answer: "Node B"
+                },
+                {
+                    question: "7. Cosa rappresenta il Cell Breathing in UMTS?",
+                    options: ["La variazione dinamica della copertura della cella in base al traffico", "L'interferenza tra celle adiacenti", "Il controllo dinamico del power control", "Il passaggio da FDD a TDD"],
+                    answer: "La variazione dinamica della copertura della cella in base al traffico"
+                },
+                {
+                    question: "8. Quale classe di QoS è ottimizzata per applicazioni real-time come la telefonia?",
+                    options: ["Background", "Interattiva", "Conversazionale", "Streaming"],
+                    answer: "Conversazionale"
+                },
+                {
+                    question: "9. Qual è la durata di una trama nel livello fisico di UMTS?",
+                    options: ["1 ms", "10 ms", "100 ms", "1 secondo"],
+                    answer: "10 ms"
+                },
+                {
+                    question: "10. Quale banda di frequenza è utilizzata per l’UMTS in uplink?",
+                    options: ["1920-1980 MHz", "2110-2170 MHz", "1700-1800 MHz", "850-900 MHz"],
+                    answer: "1920-1980 MHz"
+                }
+            ],
+            unit9: [
+                {
+                    question: "1. Qual è la velocità massima di picco supportata da HSDPA per cella?",
+                    options: ["5 Mbps", "7,2 Mbps", "14,4 Mbps", "20 Mbps"],
+                    answer: "14,4 Mbps"
+                },
+                {
+                    question: "2. Quale canale è utilizzato da HSDPA per trasmettere dati in downlink?",
+                    options: ["HS-DPCCH", "HS-DSCH", "E-DCH", "HS-PDSCH"],
+                    answer: "HS-DSCH"
+                },
+                {
+                    question: "3. Quale schema di modulazione è più efficiente in termini spettrali, ma più sensibile agli errori?",
+                    options: ["QPSK", "16QAM", "BPSK", "FSK"],
+                    answer: "16QAM"
+                },
+                {
+                    question: "4. Qual è l’obiettivo del soft combining in Hybrid-ARQ?",
+                    options: ["Ridurre la potenza di trasmissione", "Aumentare la capacità e la robustezza contro gli errori", "Ridurre la larghezza di banda", "Sincronizzare il segnale"],
+                    answer: "Aumentare la capacità e la robustezza contro gli errori"
+                },
+                {
+                    question: "5. Qual è il tempo di trasmissione per subframe in HSDPA?",
+                    options: ["10 ms", "2 ms", "5 ms", "1 ms"],
+                    answer: "2 ms"
+                },
+                {
+                    question: "6. Quale componente decide la distribuzione delle risorse in uplink nell’HSUPA?",
+                    options: ["Node B", "RNC", "UE", "Core Network"],
+                    answer: "Node B"
+                },
+                {
+                    question: "7. Qual è la funzione del Beamforming in HSPA?",
+                    options: ["Aumentare il throughput separando spazialmente gli utenti", "Ridurre la potenza di trasmissione", "Sincronizzare il segnale", "Ridurre la larghezza di banda"],
+                    answer: "Aumentare il throughput separando spazialmente gli utenti"
+                },
+                {
+                    question: "8. Quale tecnologia permette velocità fino a 20 Mbps utilizzando antenne multiple?",
+                    options: ["SDMA", "MIMO", "Beamforming", "Hybrid-ARQ"],
+                    answer: "MIMO"
+                },
+                {
+                    question: "9. Quale vantaggio offre un TTI di 2 ms rispetto a 10 ms?",
+                    options: ["Maggiore potenza di trasmissione", "Riduzione della latenza e maggiore adattabilità", "Maggiore larghezza di banda", "Minore utilizzo delle risorse"],
+                    answer: "Riduzione della latenza e maggiore adattabilità"
+                },
+                {
+                    question: "10. Qual è la velocità massima di uplink raggiungibile con HSUPA?",
+                    options: ["2 Mbps", "3,6 Mbps", "5,76 Mbps", "7,2 Mbps"],
+                    answer: "5,76 Mbps"
+                },
+                {
+                    question: "11. Qual è il principale vantaggio del canale HS-DSCH rispetto ai canali tradizionali di UMTS?",
+                    options: ["Maggiore robustezza contro il fading", "Utilizzo dinamico delle risorse radio", "Supporto solo per dati voce", "Minore larghezza di banda necessaria"],
+                    answer: "Utilizzo dinamico delle risorse radio"
+                },
+                {
+                    question: "12. Quale modulo gestisce il controllo del feedback nell’HSDPA?",
+                    options: ["Node B", "RNC", "UE", "Core Network"],
+                    answer: "Node B"
+                },
+                {
+                    question: "13. Che funzione svolge l’Hybrid-ARQ con soft combining?",
+                    options: ["Scartare i pacchetti ricevuti con errori", "Conservare le trasmissioni precedenti per migliorare la decodifica", "Aumentare il data rate massimo", "Ridurre la larghezza di banda"],
+                    answer: "Conservare le trasmissioni precedenti per migliorare la decodifica"
+                },
+                {
+                    question: "14. Quale tecnologia consente a HSPA+ di raggiungere velocità superiori a 84 Mbps?",
+                    options: ["Multi-carrier", "Beamforming", "SDMA", "Hybrid-ARQ"],
+                    answer: "Multi-carrier"
+                },
+                {
+                    question: "15. Qual è il numero massimo di E-DPDCH utilizzabili in HSUPA?",
+                    options: ["2", "4", "8", "16"],
+                    answer: "8"
+                },
+                {
+                    question: "16. Qual è il ruolo del Node B nell’HSPA?",
+                    options: ["Sincronizzare i segnali", "Assegnare risorse dinamicamente in downlink e uplink", "Gestire la commutazione del circuito", "Coordinare le handover"],
+                    answer: "Assegnare risorse dinamicamente in downlink e uplink"
+                },
+                {
+                    question: "17. Quale modulazione è usata in uplink per HSUPA?",
+                    options: ["16QAM", "QPSK", "BPSK", "GMSK"],
+                    answer: "QPSK"
+                },
+                {
+                    question: "18. Qual è un vantaggio chiave di MIMO in HSPA+?",
+                    options: ["Ridurre l’interferenza tra utenti", "Migliorare la capacità della rete utilizzando antenne multiple", "Aumentare la larghezza di banda del segnale", "Sincronizzare i segnali trasmessi"],
+                    answer: "Migliorare la capacità della rete utilizzando antenne multiple"
+                },
+                {
+                    question: "19. Qual è il throughput massimo teorico per cella in HSPA+ con MIMO?",
+                    options: ["21 Mbps", "42 Mbps", "84 Mbps", "168 Mbps"],
+                    answer: "84 Mbps"
+                },
+                {
+                    question: "20. Quale componente nel sistema HSPA supporta la trasmissione multi-portante?",
+                    options: ["Node B", "Core Network", "UE", "Scheduler"],
+                    answer: "Scheduler"
+                }
+            ],
+        unit10: [
+                {
+                    question: "1. Qual è lo standard di accesso multiplo usato nel downlink di LTE?",
+                    options: ["TDMA", "FDMA", "OFDMA", "CDMA"],
+                    answer: "OFDMA"
+                },
+                {
+                    question: "2. Qual è la velocità massima teorica di downlink supportata da LTE?",
+                    options: ["50 Mbps", "100 Mbps", "200 Mbps", "150 Mbps"],
+                    answer: "100 Mbps"
+                },
+                {
+                    question: "3. Qual è l’obiettivo principale della tecnologia MIMO in LTE?",
+                    options: ["Ridurre il consumo energetico", "Aumentare il throughput e migliorare la copertura", "Minimizzare le interferenze", "Ridurre la latenza"],
+                    answer: "Aumentare il throughput e migliorare la copertura"
+                },
+                {
+                    question: "4. Qual è la funzione principale del Packet Scheduler in LTE?",
+                    options: ["Gestire le procedure di handover", "Allocare le risorse radio in base alle esigenze QoS", "Migliorare la sincronizzazione tra utenti", "Ridurre la larghezza di banda"],
+                    answer: "Allocare le risorse radio in base alle esigenze QoS"
+                },
+                {
+                    question: "5. Cosa distingue SC-FDMA da OFDMA nell'uplink?",
+                    options: ["SC-FDMA riduce le fluttuazioni del segnale trasmesso", "SC-FDMA utilizza portanti ortogonali trasmesse in parallelo", "OFDMA migliora la QoS", "OFDMA è usato solo per traffico dati"],
+                    answer: "SC-FDMA riduce le fluttuazioni del segnale trasmesso"
+                },
+                {
+                    question: "6. Quale larghezza di banda massima può essere utilizzata da LTE con Carrier Aggregation?",
+                    options: ["20 MHz", "40 MHz", "100 MHz", "200 MHz"],
+                    answer: "100 MHz"
+                },
+                {
+                    question: "7. Qual è lo scopo principale del Channel Quality Indicator (CQI)?",
+                    options: ["Determinare la larghezza di banda necessaria", "Indicazione dello schema di modulazione ottimale", "Misurare l’efficienza spettrale", "Ridurre la latenza"],
+                    answer: "Indicazione dello schema di modulazione ottimale"
+                },
+                {
+                    question: "8. Qual è la durata di un Transmission Time Interval (TTI) in LTE?",
+                    options: ["10 ms", "5 ms", "2 ms", "1 ms"],
+                    answer: "1 ms"
+                },
+                {
+                    question: "9. Cosa si intende per Heterogeneous Network (HetNet)?",
+                    options: ["Utilizzo di frequenze diverse per uplink e downlink", "Coesistenza di celle macro e micro per migliorare la copertura", "Unificazione delle reti LTE e 3G", "Introduzione di beamforming"],
+                    answer: "Coesistenza di celle macro e micro per migliorare la copertura"
+                },
+                {
+                    question: "10. Quale tecnica permette a LTE di raggiungere i 100 MHz di larghezza di banda?",
+                    options: ["MIMO", "CoMP", "Carrier Aggregation", "SC-FDMA"],
+                    answer: "Carrier Aggregation"
+                }
+            ],
+
+        unit11: [
+                {
+                    question: "1. Quale tecnologia di accesso multiplo è utilizzata nel 5G?",
+                    options: ["TDMA", "OFDMA", "CDMA", "FDMA"],
+                    answer: "OFDMA"
+                },
+                {
+                    question: "2. Qual è la latenza minima prevista per il 5G nelle comunicazioni ultra-affidabili (URLLC)?",
+                    options: ["10 ms", "4 ms", "1 ms", "0,1 ms"],
+                    answer: "1 ms"
+                },
+                {
+                    question: "3. Qual è la velocità massima teorica in downlink del 5G?",
+                    options: ["1 Gbps", "5 Gbps", "10 Gbps", "100 Gbps"],
+                    answer: "10 Gbps"
+                },
+                {
+                    question: "4. Quale funzione ha il MIMO massivo nel 5G?",
+                    options: ["Migliorare la qualità della voce", "Aumentare la capacità e la copertura", "Ridurre il consumo energetico", "Eliminare le interferenze"],
+                    answer: "Aumentare la capacità e la copertura"
+                },
+                {
+                    question: "5. Quale tecnologia permette la suddivisione della rete 5G in più reti virtuali?",
+                    options: ["Carrier Aggregation", "Edge Computing", "Network Slicing", "Beamforming"],
+                    answer: "Network Slicing"
+                },
+                {
+                    question: "6. Quale banda di frequenza è utilizzata per il 5G mmWave?",
+                    options: ["Sotto 1 GHz", "1-6 GHz", "Oltre 24 GHz", "10-15 GHz"],
+                    answer: "Oltre 24 GHz"
+                },
+                {
+                    question: "7. Qual è la densità massima di dispositivi connessi supportata dal 5G?",
+                    options: ["10.000 dispositivi/km²", "100.000 dispositivi/km²", "1.000.000 dispositivi/km²", "10.000.000 dispositivi/km²"],
+                    answer: "1.000.000 dispositivi/km²"
+                },
+                {
+                    question: "8. Quale architettura permette di ridurre la latenza elaborando i dati vicino all'utente?",
+                    options: ["Cloud Computing", "Edge Computing", "Fog Computing", "Distributed Networking"],
+                    answer: "Edge Computing"
+                },
+                {
+                    question: "9. Quale parametro del 5G permette connessioni affidabili con una probabilità di errore bassissima?",
+                    options: ["eMBB", "URLLC", "mMTC", "IoT"],
+                    answer: "URLLC"
+                },
+                {
+                    question: "10. Quale organismo standardizza le specifiche del 5G?",
+                    options: ["IEEE", "ITU", "3GPP", "FCC"],
+                    answer: "3GPP"
+                },
+                {
+                    question: "11. Quale caratteristica del 5G consente di combinare più bande di frequenza per migliorare il throughput?",
+                    options: ["Beamforming", "Network Slicing", "Carrier Aggregation", "Multi-RAT"],
+                    answer: "Carrier Aggregation"
+                },
+                {
+                    question: "12. Qual è il principale vantaggio della banda a bassa frequenza nel 5G?",
+                    options: ["Maggiore copertura", "Maggiore velocità", "Minore interferenza", "Maggiore latenza"],
+                    answer: "Maggiore copertura"
+                },
+                {
+                    question: "13. Qual è l'obiettivo delle massive Machine Type Communications (mMTC) nel 5G?",
+                    options: ["Supportare un'elevata densità di dispositivi IoT", "Ridurre il consumo di energia nei dispositivi mobili", "Fornire connessioni ultra-affidabili", "Migliorare la qualità della voce"],
+                    answer: "Supportare un'elevata densità di dispositivi IoT"
+                },
+                {
+                    question: "14. Quale parametro misura l'efficienza con cui il 5G utilizza lo spettro radio?",
+                    options: ["Data Rate", "Latenza", "Efficienza spettrale", "Throughput"],
+                    answer: "Efficienza spettrale"
+                },
+                {
+                    question: "15. Quale innovazione tecnologica del 5G consente di migliorare la trasmissione del segnale indirizzandolo verso l'utente?",
+                    options: ["Carrier Aggregation", "Beamforming", "MIMO massivo", "SC-FDMA"],
+                    answer: "Beamforming"
+                }
+            ]
         };
 
 
-        let currentQuestions = []; // Store the currently displayed questions
+
+       let currentQuestions = []; // Store the currently displayed questions
 
         // Function to load a specific unit's questions
         function loadUnit(unitNumber) {
             const unitKey = `unit${unitNumber}`;
             currentQuestions = questions[unitKey]; // Update current questions
             displayQuestions(currentQuestions);
+
+            // Highlight the active unit button
+            const unitButtons = document.querySelectorAll(".unit button");
+            unitButtons.forEach(button => button.classList.remove("active")); // Remove active class from all buttons
+            unitButtons[unitNumber - 1].classList.add("active"); // Add active class to the selected button
         }
 
         // Function to load random questions from all units for the final unit
@@ -614,6 +923,11 @@ unit6: [
             const allQuestions = Object.values(questions).flat();
             currentQuestions = getRandomQuestions(allQuestions, 15); // Update current questions
             displayQuestions(currentQuestions);
+
+            // Highlight the final unit button
+            const unitButtons = document.querySelectorAll(".unit button");
+            unitButtons.forEach(button => button.classList.remove("active")); // Remove active class from all buttons
+            unitButtons[unitButtons.length - 1].classList.add("active"); // Add active class to the final unit button
         }
 
         // Function to display questions in the quiz form
