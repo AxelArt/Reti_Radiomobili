@@ -27,6 +27,13 @@
         .correct { color: green; }
         .incorrect { color: red; }
         .score { font-size: 20px; font-weight: bold; margin-top: 20px; }
+        .justification {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #4CAF50;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -44,6 +51,8 @@
         <button onclick="loadUnit(9)">HSPA</button>
         <button onclick="loadUnit(10)">LTE</button>
         <button onclick="loadUnit(11)">5G</button>
+         <button onclick="loadUnit(12)">Revizione</button>
+         <button onclick="loadUnit(13)">Revizione 2</button>
         <button onclick="loadFinalUnit()">Final Unit (Random Questions)</button>
     </div>
 
@@ -899,12 +908,135 @@ unit6: [
                     options: ["Carrier Aggregation", "Beamforming", "MIMO massivo", "SC-FDMA"],
                     answer: "Beamforming"
                 }
+            ],
+       unit12: [ // Revision Unit
+                {
+                    question: "1. Quale modulazione utilizza la tecnica di fase continua per migliorare l’efficienza energetica?",
+                    options: ["QAM", "ASK", "CPM", "FSK"],
+                    answer: "CPM",
+                    justification: "La Continuous Phase Modulation (CPM) mantiene la fase continua durante la trasmissione, riducendo l’occupazione spettrale e migliorando l’efficienza energetica."
+                },
+                {
+                    question: "2. Quale accesso multiplo è utilizzato nel downlink di LTE?",
+                    options: ["TDMA", "OFDMA", "CDMA", "FDMA"],
+                    answer: "OFDMA",
+                    justification: "LTE utilizza OFDMA (Orthogonal Frequency Division Multiple Access) nel downlink per una migliore gestione dello spettro e riduzione delle interferenze tra utenti."
+                },
+                {
+                    question: "3. Quale vantaggio offre SC-FDMA rispetto a OFDMA nell’uplink di LTE?",
+                    options: ["Maggiore velocità", "Minore PAPR (Peak-to-Average Power Ratio)", "Migliore efficienza spettrale", "Riduzione della latenza"],
+                    answer: "Minore PAPR (Peak-to-Average Power Ratio)",
+                    justification: "SC-FDMA ha un PAPR più basso, riducendo i problemi legati all’amplificazione nei dispositivi mobili."
+                },
+                {
+                    question: "4. Quale accesso multiplo è usato nelle reti 5G?",
+                    options: ["TDMA", "CDMA", "OFDMA", "SDMA"],
+                    answer: "OFDMA",
+                    justification: "Il 5G utilizza OFDMA per downlink e uplink, ottimizzando la gestione delle risorse radio."
+                },
+                {
+                    question: "5. Quale tecnica di accesso multiplo usa il CDMA per trasmettere più segnali su una stessa banda?",
+                    options: ["Spread Spectrum con codici pseudo-random (PN)", "Modulazione QPSK", "Multiplexing di tempo", "Multiplexing di frequenza"],
+                    answer: "Spread Spectrum con codici pseudo-random (PN)",
+                    justification: "CDMA utilizza codici pseudo-random per differenziare i segnali degli utenti sulla stessa banda senza interferenze."
+                },
+                {
+                    question: "6. Quale tecnologia permette la suddivisione della rete 5G in più reti virtuali?",
+                    options: ["Carrier Aggregation", "Edge Computing", "Network Slicing", "Beamforming"],
+                    answer: "Network Slicing",
+                    justification: "Network Slicing consente di creare più reti virtuali su una stessa infrastruttura fisica per diversi servizi e applicazioni."
+                },
+                {
+                    question: "7. Quale parametro del 5G è pensato per le connessioni ultra-affidabili a bassa latenza?",
+                    options: ["eMBB", "URLLC", "mMTC", "IoT"],
+                    answer: "URLLC",
+                    justification: "URLLC (Ultra-Reliable Low Latency Communications) è progettato per applicazioni critiche come veicoli autonomi e telechirurgia."
+                },
+                {
+                    question: "8. Quale innovazione del 5G permette di migliorare la trasmissione del segnale indirizzandolo verso l’utente?",
+                    options: ["Carrier Aggregation", "Beamforming", "MIMO massivo", "SC-FDMA"],
+                    answer: "Beamforming",
+                    justification: "Beamforming consente di focalizzare il segnale in una direzione specifica, migliorando la copertura e l’efficienza."
+                },
+                {
+                    question: "9. Quale tecnologia LTE consente di combinare più bande di frequenza per migliorare il throughput?",
+                    options: ["Beamforming", "Network Slicing", "Carrier Aggregation", "Multi-RAT"],
+                    answer: "Carrier Aggregation",
+                    justification: "Carrier Aggregation combina più bande di frequenza per aumentare il throughput disponibile per l’utente."
+                },
+                {
+                    question: "10. Quale tecnica è usata per aumentare il numero di dispositivi connessi nel 5G?",
+                    options: ["mMTC (massive Machine Type Communications)", "URLLC", "OFDMA", "Handover"],
+                    answer: "mMTC (massive Machine Type Communications)",
+                    justification: "mMTC è progettato per supportare milioni di dispositivi IoT connettendoli alla rete in modo efficiente."
+                }
+            ],
+
+        unit13: [ // Revision Unit 2
+                {
+                    question: "1. Quale vantaggio principale offre la modulazione 16-QAM rispetto alla QPSK?",
+                    options: ["Maggiore efficienza spettrale", "Minore interferenza tra i segnali", "Riduzione dell’occupazione di banda", "Minor consumo energetico"],
+                    answer: "Maggiore efficienza spettrale",
+                    justification: "La 16-QAM trasmette più bit per simbolo rispetto alla QPSK, migliorando la velocità di trasmissione a parità di banda disponibile."
+                },
+                {
+                    question: "2. Perché OQPSK è più robusto rispetto a QPSK in ambienti con amplificatori non lineari?",
+                    options: ["Riduce la larghezza di banda", "Evita transizioni di fase di 180°", "Aumenta la potenza del segnale", "Minimizza il tempo di propagazione"],
+                    answer: "Evita transizioni di fase di 180°",
+                    justification: "OQPSK introduce un ritardo nella componente quadratura (Q), riducendo le variazioni improvvise di fase che potrebbero causare distorsioni."
+                },
+                {
+                    question: "3. Quale tra queste è una modulazione a fase continua?",
+                    options: ["CPM", "BPSK", "8-QAM", "OOK"],
+                    answer: "CPM",
+                    justification: "La Continuous Phase Modulation (CPM) garantisce che la fase del segnale rimanga continua, riducendo la larghezza di banda e migliorando l’efficienza energetica."
+                },
+                {
+                    question: "4. Quale accesso multiplo è stato utilizzato principalmente nel 3G?",
+                    options: ["CDMA", "TDMA", "OFDMA", "SDMA"],
+                    answer: "CDMA",
+                    justification: "Il 3G si basa su CDMA, che consente a più utenti di condividere la stessa banda di frequenza attraverso codici univoci."
+                },
+                {
+                    question: "5. Quale vantaggio offre OFDMA rispetto a CDMA?",
+                    options: ["Maggiore immunità al fading", "Migliore efficienza spettrale e minore interferenza tra utenti", "Maggiore affidabilità nella trasmissione", "Migliore gestione della mobilità"],
+                    answer: "Migliore efficienza spettrale e minore interferenza tra utenti",
+                    justification: "OFDMA suddivide il canale in sottoportanti ortogonali, riducendo le interferenze tra utenti e migliorando l’uso dello spettro radio."
+                },
+                {
+                    question: "6. Quale tecnologia LTE migliora la qualità della trasmissione indirizzando il segnale verso l’utente?",
+                    options: ["Carrier Aggregation", "Beamforming", "Network Slicing", "mMTC"],
+                    answer: "Beamforming",
+                    justification: "Beamforming consente di concentrare l’energia del segnale nella direzione dell’utente, migliorando il throughput e riducendo le interferenze."
+                },
+                {
+                    question: "7. Quale componente della rete 5G gestisce il traffico dati tra le celle?",
+                    options: ["eNodeB", "UPF (User Plane Function)", "RNC", "BTS"],
+                    answer: "UPF (User Plane Function)",
+                    justification: "L’UPF è responsabile del traffico dati nella core network 5G, separando il controllo dalla trasmissione dei pacchetti."
+                },
+                {
+                    question: "8. Qual è la latenza media nelle reti 4G?",
+                    options: ["10-20 ms", "1 ms", "100 ms", "50 ms"],
+                    answer: "10-20 ms",
+                    justification: "Il 4G LTE offre latenze tra 10 e 20 ms, mentre il 5G riduce la latenza a 1 ms nelle comunicazioni critiche."
+                },
+                {
+                    question: "9. Quale banda di frequenza è più indicata per la copertura nelle aree rurali?",
+                    options: ["3,5 GHz", "Sotto 1 GHz", "26 GHz", "6 GHz"],
+                    answer: "Sotto 1 GHz",
+                    justification: "Le frequenze basse (<1 GHz) penetrano meglio negli edifici e coprono distanze maggiori, ideali per zone rurali."
+                },
+                {
+                    question: "10. Quale tecnologia del 5G è progettata per la comunicazione tra macchine?",
+                    options: ["eMBB", "mMTC", "URLLC", "MIMO"],
+                    answer: "mMTC",
+                    justification: "mMTC (massive Machine Type Communications) permette di connettere milioni di dispositivi IoT con bassa latenza e basso consumo energetico."
+                }
             ]
         };
 
-
-
-       let currentQuestions = []; // Store the currently displayed questions
+        let currentQuestions = []; // Store the currently displayed questions
 
         // Function to load a specific unit's questions
         function loadUnit(unitNumber) {
@@ -921,7 +1053,7 @@ unit6: [
         // Function to load random questions from all units for the final unit
         function loadFinalUnit() {
             const allQuestions = Object.values(questions).flat();
-            currentQuestions = getRandomQuestions(allQuestions, 15); // Update current questions
+            currentQuestions = getRandomQuestions(allQuestions, 5); // Update current questions
             displayQuestions(currentQuestions);
 
             // Highlight the final unit button
@@ -945,6 +1077,7 @@ unit6: [
                             <label><input type="radio" name="q${index}" value="${option}"> ${option}</label><br>
                         `).join("")}
                     </div>
+                    <div class="justification" id="justification${index}"></div>
                 `;
                 quizForm.appendChild(questionDiv);
             });
@@ -979,6 +1112,11 @@ unit6: [
                 if (selected && selected.value === q.answer) {
                     score++;
                 }
+
+                // Display justification
+                const justificationDiv = document.getElementById(`justification${index}`);
+                justificationDiv.textContent = `Giustificazione: ${q.justification}`;
+                justificationDiv.style.display = "block";
             });
 
             // Display the score
