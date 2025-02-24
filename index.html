@@ -53,6 +53,8 @@
         <button onclick="loadUnit(11)">5G</button>
          <button onclick="loadUnit(12)">Revizione</button>
          <button onclick="loadUnit(13)">Revizione 2</button>
+         <button onclick="loadUnit(14)">Revizione 3</button>
+         <button onclick="loadUnit(15)">Revizione 4</button>
         <button onclick="loadFinalUnit()">Final Unit (Random Questions)</button>
     </div>
 
@@ -305,7 +307,7 @@
                     answer: "Interferenza tra simboli (ISI)"
                 }
             ],
-            
+
         unit5: [
                 {
                     question: "1. Qual è la causa principale del fenomeno di fading nei canali radio?",
@@ -624,7 +626,7 @@ unit6: [
                 }
             ],
 
-    
+
         unit8: [
                 {
                     question: "1. Qual è la velocità massima di trasmissione dati prevista per MS fermi in UMTS?",
@@ -1033,7 +1035,289 @@ unit6: [
                     answer: "mMTC",
                     justification: "mMTC (massive Machine Type Communications) permette di connettere milioni di dispositivi IoT con bassa latenza e basso consumo energetico."
                 }
-            ]
+            ],
+     unit14: [
+    {
+        question: "23. Quale funzione ha il Beamforming nelle reti 5G?",
+        options: [
+            "Direzionare il segnale verso l’utente per migliorare la qualità della connessione",
+            "Ridurre il consumo energetico",
+            "Espandere la copertura della cella",
+            "Eliminare le interferenze tra le celle"
+        ],
+        answer: "Direzionare il segnale verso l’utente per migliorare la qualità della connessione",
+        justification: "Beamforming utilizza antenne intelligenti per inviare il segnale in direzione dell'utente, migliorando efficienza e velocità."
+    },
+    {
+        "question": "24. Quale tecnologia è essenziale per il 6G per aumentare il throughput?",
+        "options": [
+            "QPSK",
+            "THz Communications",
+            "SC-FDMA",
+            "DSSS"
+        ],
+        "answer": "THz Communications",
+        "justification": "Il 6G sfrutterà le frequenze Terahertz (THz) per raggiungere velocità estreme e supportare nuove applicazioni avanzate."
+    },
+    {
+        "question": "25. Quale caratteristica delle reti 6G permetterà di aumentare la precisione della localizzazione?",
+        "options": [
+            "Network Slicing",
+            "RIS (Reconfigurable Intelligent Surfaces)",
+            "Massive MIMO",
+            "Beamforming"
+        ],
+        "answer": "RIS (Reconfigurable Intelligent Surfaces)",
+        "justification": "RIS permettono di modificare dinamicamente la propagazione del segnale, migliorando la localizzazione e le prestazioni di rete."
+    },
+    {
+        "question": "26. Quale sarà una delle principali applicazioni del 6G?",
+        "options": [
+            "Chiamate vocali migliorate",
+            "Comunicazioni olografiche e AI-driven networks",
+            "SMS più veloci",
+            "Maggiore durata della batteria degli smartphone"
+        ],
+        "answer": "Comunicazioni olografiche e AI-driven networks",
+        "justification": "Il 6G porterà innovazioni come interfacce olografiche, AI-driven networks e realtà aumentata avanzata."
+    },
+    {
+        "question": "27. Quale tipo di modulazione potrebbe essere utilizzata nel 6G per migliorare la trasmissione a THz?",
+        "options": [
+            "256-QAM",
+            "Orbital Angular Momentum (OAM) Modulation",
+            "CPM",
+            "BPSK"
+        ],
+        "answer": "Orbital Angular Momentum (OAM) Modulation",
+        "justification": "OAM Modulation sfrutta proprietà quantistiche per trasportare più dati in una stessa banda, ideale per frequenze THz."
+    }
+],
+
+
+unit15:
+[
+    {
+        question: "Qual è la latenza minima prevista per le comunicazioni ultra-affidabili nel 5G?",
+        options: [
+            "10 ms",
+            "4 ms",
+            "1 ms",
+            "0,1 ms"
+        ],
+        answer: "1 ms",
+        justification: "URLLC in 5G garantisce latenze inferiori a 1 ms, essenziali per applicazioni critiche."
+    },
+    {
+        question: "Qual è la velocità massima teorica in downlink per il 5G?",
+        options: [
+            "1 Gbps",
+            "5 Gbps",
+            "10 Gbps",
+            "100 Gbps"
+        ],
+        answer: "10 Gbps",
+        justification: "Il 5G permette velocità fino a 10 Gbps grazie all’uso di MIMO massivo e bande millimetriche."
+    },
+    {
+        question: "Quale banda di frequenza è utilizzata per il 5G mmWave?",
+        options: [
+            "Sotto 1 GHz",
+            "1-6 GHz",
+            "Oltre 24 GHz",
+            "10-15 GHz"
+        ],
+        answer: "Oltre 24 GHz",
+        justification: "Il 5G mmWave usa bande oltre 24 GHz, offrendo velocità molto elevate ma con copertura limitata."
+    },
+    {
+        question: "Quale banda offre la copertura più ampia nel 5G?",
+        options: [
+            "Sotto 1 GHz",
+            "1-6 GHz",
+            "24-100 GHz",
+            "Oltre 100 GHz"
+        ],
+        answer: "Sotto 1 GHz",
+        justification: "La banda sotto 1 GHz è ideale per la copertura in aree rurali e all’interno degli edifici."
+    },
+    {
+        question: "Quale tecnologia riduce la latenza elaborando i dati vicino all’utente?",
+        options: [
+            "Cloud Computing",
+            "Edge Computing",
+            "Fog Computing",
+            "Handover"
+        ],
+        answer: "Edge Computing",
+        justification: "Edge Computing permette di elaborare i dati il più vicino possibile all’utente, riducendo la latenza."
+    },
+    {
+        question: "Quale componente della rete LTE sostituisce il tradizionale BSC/RNC di UMTS?",
+        options: [
+            "Core Network",
+            "eNB",
+            "eNodeB",
+            "EPC"
+        ],
+        answer: "eNodeB",
+        justification: "eNodeB integra le funzioni del BSC e RNC, riducendo la complessità dell’architettura LTE."
+    },
+    {
+        question: "Qual è il ruolo principale del MIMO massivo nel 5G?",
+        options: [
+            "Ridurre la latenza",
+            "Aumentare la capacità e l’efficienza spettrale",
+            "Ridurre il consumo energetico",
+            "Diminuire l’occupazione di banda"
+        ],
+        answer: "Aumentare la capacità e l’efficienza spettrale",
+        justification: "Il MIMO massivo utilizza più antenne per trasmettere e ricevere più flussi di dati contemporaneamente, aumentando capacità e throughput."
+    },
+    {
+        question: "Quale tecnologia nel 5G consente di ottimizzare l’uso dello spettro evitando interferenze?",
+        options: [
+            "SC-FDMA",
+            "OFDMA",
+            "QAM",
+            "DSSS"
+        ],
+        answer: "OFDMA",
+        justification: "OFDMA suddivide lo spettro in sottoportanti ortogonali, riducendo le interferenze tra gli utenti e migliorando l’efficienza spettrale."
+    },
+    {
+        question: "Quale modulazione è tipicamente usata nel 5G per ottenere le massime velocità di trasmissione?",
+        options: [
+            "BPSK",
+            "QPSK",
+            "256-QAM",
+            "GMSK"
+        ],
+        answer: "256-QAM",
+        justification: "256-QAM aumenta il numero di bit trasmessi per simbolo, consentendo velocità di trasmissione più elevate."
+    },
+    {
+        question: "Quale funzione ha il Beamforming nelle reti 5G?",
+        options: [
+            "Direzionare il segnale verso l’utente per migliorare la qualità della connessione",
+            "Ridurre il consumo energetico",
+            "Espandere la copertura della cella",
+            "Eliminare le interferenze tra le celle"
+        ],
+        answer: "Direzionare il segnale verso l’utente per migliorare la qualità della connessione",
+        justification: "Beamforming consente di focalizzare il segnale in direzione dell’utente, migliorando efficienza e qualità della connessione."
+    },
+    {
+        question: "Quale tecnologia permette di utilizzare più bande di frequenza simultaneamente in 5G?",
+        options: [
+            "Carrier Slicing",
+            "Beamforming",
+            "Carrier Aggregation",
+            "DSSS"
+        ],
+        answer: "Carrier Aggregation",
+        justification: "Carrier Aggregation combina più bande di frequenza per aumentare la capacità e il throughput totale disponibile."
+    },
+    {
+        question: "Qual è il principale vantaggio della suddivisione dinamica della rete (Network Slicing) nel 5G?",
+        options: [
+            "Ridurre il consumo di batteria dei dispositivi",
+            "Creare reti virtuali personalizzate per diversi tipi di servizi",
+            "Aumentare la velocità di trasmissione dati",
+            "Evitare interferenze tra le bande di frequenza"
+        ],
+        answer: "Creare reti virtuali personalizzate per diversi tipi di servizi",
+        justification: "Network Slicing consente agli operatori di creare reti virtuali dedicate, ottimizzate per servizi diversi (IoT, veicoli autonomi, ecc.)."
+    },
+    {
+        question: "Quale componente della rete 5G si occupa della gestione del traffico dati?",
+        options: [
+            "eNodeB",
+            "UPF (User Plane Function)",
+            "EPC",
+            "BTS"
+        ],
+        answer: "UPF (User Plane Function)",
+        justification: "UPF (User Plane Function) gestisce il traffico dati nella core network 5G, migliorando flessibilità e prestazioni."
+    },
+    {
+        question: "Quale strategia è adottata nel 5G per migliorare la gestione della mobilità tra le celle?",
+        options: [
+            "Hard Handover",
+            "Soft Handover",
+            "Seamless Handover",
+            "Macro Diversity"
+        ],
+        answer: "Seamless Handover",
+        justification: "Seamless Handover consente il passaggio trasparente da una cella all’altra senza interruzioni nella connessione."
+    },
+    {
+        question: "Qual è il principale vantaggio dell’Edge Computing nel 5G?",
+        options: [
+            "Aumentare la velocità di trasmissione",
+            "Migliorare la sicurezza dei dati",
+            "Ridurre la latenza elaborando i dati vicino all’utente",
+            "Espandere la copertura della rete"
+        ],
+        answer: "Ridurre la latenza elaborando i dati vicino all’utente",
+        justification: "Edge Computing permette di processare i dati vicino all’utente, riducendo la latenza rispetto al cloud centrale."
+    },
+    {
+        question: "Quale parametro del 5G consente di connettere milioni di dispositivi IoT in modo efficiente?",
+        options: [
+            "URLLC",
+            "mMTC",
+            "eMBB",
+            "NB-IoT"
+        ],
+        answer: "mMTC",
+        justification: "mMTC (massive Machine Type Communications) è pensato per connettere un elevato numero di dispositivi IoT con bassa latenza e consumo ridotto."
+    },
+    {
+        question: "Quale tecnica di codifica aiuta a correggere gli errori nel 5G?",
+        options: [
+            "Polar Coding",
+            "LDPC (Low-Density Parity Check)",
+            "Turbo Coding",
+            "Hamming Coding"
+        ],
+        answer: "LDPC (Low-Density Parity Check)",
+        justification: "LDPC è utilizzato nel 5G per la correzione degli errori, offrendo prestazioni migliori rispetto ai Turbo Code del 4G."
+    },
+    {
+        question: "Quale caratteristica delle reti 5G permette di ridurre i consumi energetici nei dispositivi mobili?",
+        options: [
+            "Sleep Mode e Discontinuous Reception (DRX)",
+            "Handover ottimizzato",
+            "Modulazione QPSK",
+            "Beamforming"
+        ],
+        answer: "Sleep Mode e Discontinuous Reception (DRX)",
+        justification: "Sleep Mode e DRX permettono ai dispositivi di rimanere inattivi per periodi più lunghi, riducendo il consumo energetico."
+    },
+    {
+        question: "Quale tecnologia sarà essenziale nelle future reti 6G per migliorare ulteriormente il throughput?",
+        options: [
+            "QPSK",
+            "THz Communications",
+            "SC-FDMA",
+            "DSSS"
+        ],
+        answer: "THz Communications",
+        justification: "Le comunicazioni a frequenze Terahertz (THz) offriranno larghezza di banda estreme per applicazioni future del 6G."
+    },
+    {
+        question: "Quale concetto sarà fondamentale nel 6G per aumentare la precisione nella localizzazione degli utenti?",
+        options: [
+            "Network Slicing",
+            "RIS (Reconfigurable Intelligent Surfaces)",
+            "Massive MIMO",
+            "eMBB"
+        ],
+        answer: "RIS (Reconfigurable Intelligent Surfaces)",
+        justification: "Le RIS (Reconfigurable Intelligent Surfaces) permetteranno di modificare dinamicamente la propagazione dei segnali, migliorando la localizzazione e l’efficienza delle comunicazioni."
+    }
+]
         };
 
         let currentQuestions = []; // Store the currently displayed questions
